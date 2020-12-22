@@ -843,6 +843,8 @@ librados::IoCtx duplicate_io_ctx(librados::IoCtx& io_ctx) {
       config.get_val<uint64_t>("rbd_qos_write_bps_limit"),
       config.get_val<uint64_t>("rbd_qos_write_bps_burst"),
       config.get_val<uint64_t>("rbd_qos_write_bps_burst_seconds"));
+    io_image_dispatcher->apply_qos_exclude_ops(
+      config.get_val<uint64_t>("rbd_qos_exclude_ops"));
 
     if (!disable_zero_copy &&
         config.get_val<bool>("rbd_disable_zero_copy_writes")) {
