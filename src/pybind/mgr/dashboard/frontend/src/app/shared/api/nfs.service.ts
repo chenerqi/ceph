@@ -41,7 +41,7 @@ export class NfsService {
   nfsFsal = [
     {
       value: 'CEPH',
-      descr: this.i18n('CephFS')
+      descr: this.i18n('ZPFS')
     },
     {
       value: 'RGW',

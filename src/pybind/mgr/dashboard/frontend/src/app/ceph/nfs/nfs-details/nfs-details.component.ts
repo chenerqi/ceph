@@ -60,9 +60,9 @@ export class NfsDetailsComponent implements OnChanges {
       this.data[this.i18n('Path')] = this.selectedItem.path;
 
       if (this.selectedItem.fsal.name === 'CEPH') {
-        this.data[this.i18n('Storage Backend')] = this.i18n('CephFS');
-        this.data[this.i18n('CephFS User')] = this.selectedItem.fsal.user_id;
-        this.data[this.i18n('CephFS Filesystem')] = this.selectedItem.fsal.fs_name;
+        this.data[this.i18n('Storage Backend')] = this.i18n('ZPFS');
+        this.data[this.i18n('ZPFS User')] = this.selectedItem.fsal.user_id;
+        this.data[this.i18n('ZPFS Filesystem')] = this.selectedItem.fsal.fs_name;
         this.data[this.i18n('Security Label')] = this.selectedItem.fsal.sec_label_xattr;
       } else {
         this.data[this.i18n('Storage Backend')] = this.i18n('Object Gateway');

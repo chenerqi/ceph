@@ -330,13 +330,13 @@ class Docs(BaseController):
             'openapi': "3.0.0",
             'info': {
                 'description': "Please note that this API is not an official "
-                               "Ceph REST API to be used by third-party "
+                               "Zstore REST API to be used by third-party "
                                "applications. It's primary purpose is to serve"
-                               " the requirements of the Ceph Dashboard and is"
+                               " the requirements of the Zstore Dashboard and is"
                                " subject to change at any time. Use at your "
                                "own risk.",
                 'version': "v1",
-                'title': "Ceph-Dashboard REST API"
+                'title': "Zstore-Dashboard REST API"
             },
             'host': host,
             'basePath': base_url,

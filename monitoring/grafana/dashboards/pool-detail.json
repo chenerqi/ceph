@@ -659,7 +659,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Ceph Pool Details",
+  "title": "Zstore Pool Details",
   "uid": "-xyV8KCiz",
   "version": 1
 }

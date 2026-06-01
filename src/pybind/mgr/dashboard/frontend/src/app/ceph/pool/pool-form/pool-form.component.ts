@@ -230,7 +230,11 @@ export class PoolFormComponent implements OnInit {
       }
     });
     this.data.pgs = this.form.getValue('pgNum');
-    this.data.applications.selected = pool.application_metadata;
+    this.data.applications.selected = this.normalizeApplicationMetadata(pool.application_metadata);
+  }
+
+  private normalizeApplicationMetadata(apps: string[] = []) {
+    return apps.map((app) => (app === 'cephfs' ? 'zpfs' : app));
   }
 
   private listenToChanges() {
@@ -591,7 +595,7 @@ export class PoolFormComponent implements OnInit {
       }
     }
 
-    const apps = this.data.applications.selected;
+    const apps = this.normalizeApplicationMetadata(this.data.applications.selected);
     if (apps.length > 0 || this.editing) {
       pool['application_metadata'] = apps;
     }

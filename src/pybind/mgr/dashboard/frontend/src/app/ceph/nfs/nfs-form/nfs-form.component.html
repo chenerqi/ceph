@@ -152,13 +152,13 @@
             </div>
           </div>
 
-          <!-- CephFS user_id -->
+          <!-- ZPFS user_id -->
           <div class="form-group"
                [ngClass]="{'has-error': nfsForm.showError('user_id', formDir)}"
                *ngIf="nfsForm.getValue('name') === 'CEPH'">
             <label class="col-sm-3 control-label"
                    for="user_id">
-              <ng-container i18n>CephFS User ID</ng-container>
+              <ng-container i18n>ZPFS User ID</ng-container>
               <span class="required"></span>
             </label>
             <div class="col-sm-9">
@@ -184,13 +184,13 @@
             </div>
           </div>
 
-          <!-- CephFS fs_name -->
+          <!-- ZPFS fs_name -->
           <div class="form-group"
                [ngClass]="{'has-error': nfsForm.showError('fs_name', formDir)}"
                *ngIf="nfsForm.getValue('name') === 'CEPH'">
             <label class="col-sm-3 control-label"
                    for="fs_name">
-              <ng-container i18n>CephFS Name</ng-container>
+              <ng-container i18n>ZPFS Name</ng-container>
               <span class="required"></span>
             </label>
             <div class="col-sm-9">
@@ -204,10 +204,10 @@
                         i18n>Loading...</option>
                 <option *ngIf="allFsNames !== null && allFsNames.length === 0"
                         value=""
-                        i18n>-- No CephFS filesystem available --</option>
+                        i18n>-- No ZPFS filesystem available --</option>
                 <option *ngIf="allFsNames !== null && allFsNames.length > 0"
                         value=""
-                        i18n>-- Select the CephFS filesystem --</option>
+                        i18n>-- Select the ZPFS filesystem --</option>
                 <option *ngFor="let filesystem of allFsNames"
                         [value]="filesystem.name">{{ filesystem.name }}</option>
               </select>
@@ -260,7 +260,7 @@
              *ngIf="nfsForm.getValue('name') === 'CEPH'">
           <label class="col-sm-3 control-label"
                  for="path">
-            <ng-container i18n>CephFS Path</ng-container>
+            <ng-container i18n>ZPFS Path</ng-container>
             <span class="required"></span>
           </label>
           <div class="col-sm-9">

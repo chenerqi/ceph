@@ -43,12 +43,12 @@
              [ngClass]="{'has-error': editPeerForm.showError('clientID', formDir)}">
           <label class="control-label"
                  for="clientID">
-            <span i18n>CephX ID</span>
+            <span i18n>ZstoreX ID</span>
             <span class="required"></span>
           </label>
           <input class="form-control"
                  type="text"
-                 placeholder="CephX ID..."
+                 placeholder="ZstoreX ID..."
                  i18n-placeholder
                  id="clientID"
                  name="clientID"
@@ -58,7 +58,7 @@
                 i18n>This field is required.</span>
           <span class="help-block"
                 *ngIf="editPeerForm.showError('clientID', formDir, 'invalidClientID')"
-                i18n>The CephX ID is not valid.</span>
+                i18n>The ZstoreX ID is not valid.</span>
         </div>
 
         <div class="form-group"
@@ -83,7 +83,7 @@
              [ngClass]="{'has-error': editPeerForm.showError('key', formDir)}">
           <label class="control-label"
                  for="key">
-            <span i18n>CephX Key</span>
+            <span i18n>ZstoreX Key</span>
           </label>
           <input class="form-control"
                  type="text"
@@ -94,7 +94,7 @@
                  formControlName="key">
           <span class="help-block"
                 *ngIf="editPeerForm.showError('key', formDir, 'invalidKey')"
-                i18n>CephX key must be base64 encoded.</span>
+                i18n>ZstoreX key must be base64 encoded.</span>
         </div>
 
       </div>

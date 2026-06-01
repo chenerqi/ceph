@@ -17,7 +17,7 @@ export class PoolFormData {
     this.applications = {
       selected: [],
       available: [
-        new SelectOption(false, 'cephfs', ''),
+        new SelectOption(false, 'zpfs', ''),
         new SelectOption(false, 'rbd', ''),
         new SelectOption(false, 'rgw', '')
       ],

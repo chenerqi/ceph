@@ -87,7 +87,7 @@ describe('NfsFormComponent', () => {
     expect(component.allDaemons).toEqual({ cluster1: ['node1', 'node2'], cluster2: ['node5'] });
     expect(component.isDefaultCluster).toEqual(false);
     expect(component.allFsals).toEqual([
-      { descr: 'CephFS', value: 'CEPH' },
+      { descr: 'ZPFS', value: 'CEPH' },
       { descr: 'Object Gateway', value: 'RGW' }
     ]);
     expect(component.allCephxClients).toEqual(['admin', 'fs', 'rgw']);

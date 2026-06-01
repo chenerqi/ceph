@@ -1,6 +1,6 @@
 export enum Components {
   auth = 'Login',
-  cephfs = 'CephFS',
+  cephfs = 'ZPFS',
   rbd = 'RBD',
   pool = 'Pool',
   osd = 'OSD',

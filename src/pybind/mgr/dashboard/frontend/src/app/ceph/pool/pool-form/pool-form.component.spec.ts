@@ -565,8 +565,8 @@ describe('PoolFormComponent', () => {
     it('adds all predefined and a custom applications to the application metadata array', () => {
       testAddApp('g', ['rgw']);
       testAddApp('b', ['rbd', 'rgw']);
-      testAddApp('c', ['cephfs', 'rbd', 'rgw']);
-      testAddApp('something', ['cephfs', 'rbd', 'rgw', 'something']);
+      testAddApp('c', ['zpfs', 'rbd', 'rgw']);
+      testAddApp('something', ['zpfs', 'rbd', 'rgw', 'something']);
     });
 
     it('only allows 4 apps to be added to the array', () => {
@@ -963,12 +963,12 @@ describe('PoolFormComponent', () => {
         poolType: 'erasure',
         pgNum: 128
       });
-      component.data.applications.selected = ['cephfs', 'rgw'];
+      component.data.applications.selected = ['zpfs', 'rgw'];
       testCreate({
         pool: 'apps',
         pool_type: 'erasure',
         pg_num: 128,
-        application_metadata: ['cephfs', 'rgw']
+        application_metadata: ['zpfs', 'rgw']
       });
     });
   });

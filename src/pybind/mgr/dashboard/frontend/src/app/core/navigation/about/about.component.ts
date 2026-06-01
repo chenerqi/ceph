@@ -36,7 +36,7 @@ export class AboutComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.copyright = 'Copyright(c) ' + environment.year + ' Ceph contributors.';
+    this.copyright = 'Copyright(c) ' + environment.year + ' Zstore contributors.';
     this.projectConstants = AppConstants;
     this.hostAddr = window.location.hostname;
     this.modalVariables = this.setVariables();

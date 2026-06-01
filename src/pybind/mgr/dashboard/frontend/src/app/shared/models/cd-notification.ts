@@ -5,7 +5,7 @@ export class CdNotificationConfig {
   applicationClass: string;
 
   private classes = {
-    Ceph: 'ceph-icon',
+    Zstore: 'ceph-icon',
     Prometheus: 'prometheus-icon'
   };
 
@@ -14,7 +14,7 @@ export class CdNotificationConfig {
     public title?: string,
     public message?: string, // Use this for additional information only
     public options?: any | IndividualConfig,
-    public application: string = 'Ceph'
+    public application: string = 'Zstore'
   ) {
     this.applicationClass = this.classes[this.application];
   }

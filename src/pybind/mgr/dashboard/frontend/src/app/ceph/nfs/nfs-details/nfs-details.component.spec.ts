@@ -63,8 +63,8 @@ describe('NfsDetailsComponent', () => {
   it('should prepare data', () => {
     expect(component.data).toEqual({
       'Access Type': 'RW',
-      'CephFS Filesystem': 1,
-      'CephFS User': 'fs',
+      'ZPFS Filesystem': 1,
+      'ZPFS User': 'fs',
       Cluster: 'cluster1',
       Daemons: ['node1', 'node2'],
       'NFS Protocol': ['NFSv3', 'NFSv4'],
@@ -72,7 +72,7 @@ describe('NfsDetailsComponent', () => {
       Pseudo: '/qwe',
       'Security Label': undefined,
       Squash: 'no_root_squash',
-      'Storage Backend': 'CephFS',
+      'Storage Backend': 'ZPFS',
       Transport: ['TCP', 'UDP']
     });
   });

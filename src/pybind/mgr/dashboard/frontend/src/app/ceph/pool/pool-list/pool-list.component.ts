@@ -259,6 +259,7 @@ export class PoolListComponent implements OnInit {
       });
       pool['stats'] = stats;
       pool['usage'] = stats.percent_used.latest;
+      pool['application_metadata'] = this.normalizeApplicationMetadata(pool['application_metadata']);
 
       if (
         !pool.cdExecuting &&
@@ -274,6 +275,10 @@ export class PoolListComponent implements OnInit {
     });
 
     return pools;
+  }
+
+  private normalizeApplicationMetadata(apps: string[] = []) {
+    return apps.map((app) => (app === 'cephfs' ? 'zpfs' : app));
   }
 
   transformPgStatus(pgStatus: any): string {
