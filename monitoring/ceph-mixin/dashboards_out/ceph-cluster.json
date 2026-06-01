@@ -28,7 +28,7 @@
   "annotations": {
     "list": []
   },
-  "description": "Ceph cluster overview",
+  "description": "Zstore cluster overview",
   "editable": false,
   "gnetId": null,
   "graphTooltip": 0,
@@ -1405,6 +1405,6 @@
     ]
   },
   "timezone": "",
-  "title": "Ceph - Cluster",
+  "title": "Zstore - Cluster",
   "version": 13
 }

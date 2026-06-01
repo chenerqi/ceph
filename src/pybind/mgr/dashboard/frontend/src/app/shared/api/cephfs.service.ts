@@ -90,7 +90,11 @@ export class CephfsService {
   }
 
   isCephFsPool(pool: any) {
-    return _.indexOf(pool.application_metadata, 'cephfs') !== -1 && !pool.pool_name.includes('/');
+    return (
+      (_.indexOf(pool.application_metadata, 'zpfs') !== -1 ||
+        _.indexOf(pool.application_metadata, 'cephfs') !== -1) &&
+      !pool.pool_name.includes('/')
+    );
   }
 
   remove(name: string) {

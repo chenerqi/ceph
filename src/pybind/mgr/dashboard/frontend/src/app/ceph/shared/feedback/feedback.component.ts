@@ -88,7 +88,7 @@ export class FeedbackComponent implements OnInit, OnDestroy {
         next: (result) => {
           this.notificationService.show(
             NotificationType.success,
-            $localize`Issue successfully created on Ceph Issue tracker`,
+            $localize`Issue successfully created on Zstore Issue tracker`,
             `Go to the tracker: <a href="https://tracker.ceph.com/issues/${result['message']['issue']['id']}" target="_blank"> ${result['message']['issue']['id']} </a>`
           );
         },

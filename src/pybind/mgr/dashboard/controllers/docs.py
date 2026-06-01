@@ -374,9 +374,9 @@ class Docs(BaseController):
         spec = {
             'openapi': "3.0.0",
             'info': {
-                'description': "This is the official Ceph REST API",
+                'description': "This is the official Zstore REST API",
                 'version': "v1",
-                'title': "Ceph REST API"
+                'title': "Zstore REST API"
             },
             'host': host,
             'basePath': base_url,

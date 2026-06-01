@@ -41,7 +41,7 @@
          }
       ]
    },
-   "description": "Ceph cluster overview",
+   "description": "Zstore cluster overview",
    "editable": false,
    "gnetId": null,
    "graphTooltip": 0,
@@ -159,7 +159,7 @@
                "step": 300
             }
          ],
-         "title": "Ceph health status",
+         "title": "Zstore health status",
          "transparent": true,
          "type": "stat"
       },
@@ -3618,7 +3618,7 @@
          ],
          "timeFrom": null,
          "timeShift": null,
-         "title": "Ceph Versions",
+         "title": "Zstore Versions",
          "transformations": [
             {
                "id": "merge",
@@ -3807,7 +3807,7 @@
       ]
    },
    "timezone": "",
-   "title": "Ceph Cluster - Advanced",
+   "title": "Zstore Cluster - Advanced",
    "uid": "dn13KBeTv",
    "version": 0
 }

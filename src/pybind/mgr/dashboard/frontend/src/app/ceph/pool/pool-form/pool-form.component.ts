@@ -288,8 +288,9 @@ export class PoolFormComponent extends CdForm implements OnInit {
       }
     });
     this.data.pgs = this.form.getValue('pgNum');
-    this.setAvailableApps(this.data.applications.default.concat(pool.application_metadata));
-    this.data.applications.selected = pool.application_metadata;
+    const applicationMetadata = this.normalizeApplicationMetadata(pool.application_metadata);
+    this.setAvailableApps(this.data.applications.default.concat(applicationMetadata));
+    this.data.applications.selected = applicationMetadata;
     this.rbdMirroringService
       .getPool(pool.pool_name)
       .subscribe((resp: PoolEditModeResponseModel) => {
@@ -297,8 +298,12 @@ export class PoolFormComponent extends CdForm implements OnInit {
       });
   }
 
+  private normalizeApplicationMetadata(apps: string[] = []) {
+    return apps.map((app) => (app === 'cephfs' ? 'zpfs' : app));
+  }
+
   private setAvailableApps(apps: string[] = this.data.applications.default) {
-    this.data.applications.available = _.uniq(apps.sort()).map(
+    this.data.applications.available = _.uniq(this.normalizeApplicationMetadata(apps).sort()).map(
       (x: string) => new SelectOption(false, x, '')
     );
   }
