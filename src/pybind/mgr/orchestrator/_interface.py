@@ -82,7 +82,7 @@ class NoOrchestrator(OrchestratorError):
     No orchestrator in configured.
     """
 
-    def __init__(self, msg: str = "No orchestrator configured (try `ceph orch set backend`)") -> None:
+    def __init__(self, msg: str = "No orchestrator configured (try `zstore orch set backend`)") -> None:
         super(NoOrchestrator, self).__init__(msg, errno=-errno.ENOENT)
 
 

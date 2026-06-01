@@ -16,19 +16,19 @@
              *ngIf="!isAPIKeySet">
           <label class="cd-col-form-label required"
                  for="api_key"
-                 i18n>Ceph Tracker API Key</label>
+                 i18n>Zstore Tracker API Key</label>
           <div class="cd-col-form-input">
             <input id="api_key"
                    type="password"
                    formControlName="api_key"
                    class="form-control"
-                   placeholder="Add Ceph tracker API key">
+                   placeholder="Add Zstore tracker API key">
             <span class="invalid-feedback"
                   *ngIf="feedbackForm.showError('api_key', formDir, 'required')"
-                  i18n>Ceph Tracker API key is required.</span>
+                  i18n>Zstore Tracker API key is required.</span>
             <span class="invalid-feedback"
                   *ngIf="feedbackForm.showError('api_key', formDir, 'invalidApiKey')"
-                  i18n>Ceph Tracker API key is invalid.</span>
+                  i18n>Zstore Tracker API key is invalid.</span>
           </div>
         </div>
 

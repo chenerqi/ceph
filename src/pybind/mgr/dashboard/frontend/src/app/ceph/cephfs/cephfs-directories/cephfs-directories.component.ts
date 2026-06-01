@@ -455,7 +455,7 @@ export class CephfsDirectoriesComponent implements OnInit, OnChanges {
   }
 
   private getModalQuotaTitle(action: string, path: string): string {
-    return $localize`${action} CephFS ${this.getQuotaName()} quota for '${path}'`;
+    return $localize`${action} ZPFS ${this.getQuotaName()} quota for '${path}'`;
   }
 
   private getQuotaName(): string {
@@ -692,7 +692,7 @@ export class CephfsDirectoriesComponent implements OnInit, OnChanges {
   deleteSnapshotModal() {
     this.modalRef = this.modalService.show(DeleteConfirmationModalComponent, {
       impact: DeletionImpact.high,
-      itemDescription: $localize`CephFs Snapshot`,
+      itemDescription: $localize`ZPFS Snapshot`,
       itemNames: this.snapshot.selection.selected.map((snapshot: CephfsSnapshot) => snapshot.name),
       submitAction: () => this.deleteSnapshot()
     });

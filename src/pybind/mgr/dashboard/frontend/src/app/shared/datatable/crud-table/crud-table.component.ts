@@ -167,7 +167,7 @@ export class CRUDTableComponent implements OnInit {
     this.selection.selected.forEach((row) => entities.push(row.entity));
     this.cephUserService.export(entities).subscribe((data: string) => {
       const modalVariables = {
-        titleText: $localize`Ceph user export data`,
+        titleText: $localize`Zstore user export data`,
         buttonText: $localize`Close`,
         bodyTpl: this.authxEportTpl,
         showSubmit: true,

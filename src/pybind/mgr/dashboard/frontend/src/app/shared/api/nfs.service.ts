@@ -35,7 +35,7 @@ export class NfsService extends ApiClient {
   nfsFsal: NfsFSAbstractionLayer[] = [
     {
       value: SUPPORTED_FSAL.CEPH,
-      descr: $localize`CephFS`,
+      descr: $localize`ZPFS`,
       disabled: false
     },
     {
